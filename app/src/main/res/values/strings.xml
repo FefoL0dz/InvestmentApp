@@ -4,4 +4,7 @@
     <string name="error">Erro</string>
     <string name="concern">Ok</string>
     <string name="success">Sucesso</string>
+
+    <!-- HGBRasil -->
+    <string name="hgbrasil">hgbrasil</string>
 </resources>
