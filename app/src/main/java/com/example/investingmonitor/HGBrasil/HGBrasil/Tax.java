@@ -5,5 +5,5 @@ import java.util.List;
 public class Tax {
     public String by;
     public String valid_key;
-    public List<Results> results;
+    public List<com.example.investingmonitor.models.Results> results;
 }
