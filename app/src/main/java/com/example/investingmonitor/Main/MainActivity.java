@@ -1,5 +1,6 @@
-package com.example.investingmonitor;
+package com.example.investingmonitor.Main;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -10,7 +11,10 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.investingmonitor.Feed.FeedActivity;
+import com.example.investingmonitor.R;
+
+public class MainActivity extends AppCompatActivity implements MainContract.View{
 
     private MainPresenter presenter;
 
@@ -35,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        this.presenter.subscribe();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        this.presenter.unsubscribe();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -54,5 +70,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void showLoginScreen() {
+
+    }
+
+    @Override
+    public void showFeedScreen() {
+        Intent intent = new Intent(this, FeedActivity.class);
+        this.overridePendingTransition(android.R.anim.fade_in,
+                android.R.anim.fade_out);
+        this.startActivity(intent);
+        this.finish();
     }
 }

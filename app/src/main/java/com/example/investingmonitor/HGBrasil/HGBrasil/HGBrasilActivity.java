@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.investingmonitor.MainPresenter;
+import com.example.investingmonitor.Main.MainPresenter;
 import com.example.investingmonitor.R;
 import com.example.investingmonitor.models.Tax;
 import com.example.investingmonitor.webService.HGBrasilApiService;
