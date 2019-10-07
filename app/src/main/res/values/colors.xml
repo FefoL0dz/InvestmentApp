@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimaryG">#008577</color>
+    <color name="colorPrimaryDarkG">#00574B</color>
+    <color name="colorAccent1">#D81B60</color>
+    <color name="whiteColor">#FFFFFF</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="font_default_color">#333333</color>
+    <color name="font_dark_primary_color">#FFFFFF</color>
+    <color name="font_secondary_color">#999999</color>
+    <color name="actionbar_background">#FFFFFF</color>
+    <color name="background_light_primary">#FFFFFF</color>
+    <color name="background_light_secondary">#EEEEEE</color>
+    <color name="design_dark_grey">#58585B</color>
+    <color name="design_grey">#A7A9AC</color>
+    <color name="design_light_grey">#F1EEE8</color>
+    <color name="design_dark_orange">#f89a46</color>
+    <color name="design_light_orange">#FCB615</color>
+    <color name="design_yellow">#FEB100</color>
+
+    <color name="design_blue_secondary">#265885</color>
+    <color name="design_blue_glow">#D0F1FF</color>
+    <color name="design_green">#64CEA2</color>
+    <color name="design_red">#F27360</color>
+    <color name="ranking_blue">#4A90E2</color>
+    <color name="ranking_blue_seconday">#3E6695</color>
+
+    <color name="primary">#009688</color>
+    <color name="primaryDark">#00796b</color>
+    <color name="accent">#eeff41</color>
+    <color name="accentLight">#F4FF81</color>
+
+    <!-- Shared Preferences -->
+    <color name="survey_red">#FF5151</color>
+    <color name="survey_yellow">#FFB11F</color>
+
+    <color name="design_light_gold">#fff7cc</color>
+
+    <color name="trophyColor">#F27360</color>
+    <color name="trophyColorSecundary">#D8503B</color>
+    <color name="pointsColor">#F3C766</color>
+    <color name="pointsColorSecundary">#FFD985</color>
+    <color name="pointsColorDark">#E3BB62</color>
+
+    <color name="flatBlackColor">#2B2B2B</color>
+    <color name="flatMintColor">#1ABC9C</color>
+    <color name="flatOrangeColor">#E57D22</color>
+    <color name="flatRedColor">#E84D3C</color>
+    <color name="flatWhiteColor">#EDF1F2</color>
+    <color name="flatBlackColorDark">#262626</color>
+    <color name="flatWhiteColorDark">#BCC2C6</color>
+    <color name="greyDark">#5B5D5E</color>
+    <color name="greyLight">#BCBDC1</color>
+    <color name="blueDark">#485869</color>
+    <color name="blackTransparent">#99000000</color>
+    <color name="flatOrangeColorDark">#D35400</color>
+
+    <!--New layout colors-->
+    <color name="grey_dark">#707070</color>
+    <color name="grey_light">#B1B1B1</color>
+    <color name="grey_lightest">#EAEAEA</color>
+    <color name="orange_dark">#B8671E</color>
+    <color name="orange_light">#f89a46</color>
+    <color name="coint_text_color">#C69100</color>
+    <color name="window_background">#F5F5F5</color>
+    <color name="blue_light">#57ADFF</color>
+    <color name="blue_dark">#4A92D7</color>
+    <color name="red_dark">#F07464</color>
+    <color name="tutorial_background1">#6D537A</color>
+    <color name="tutorial_background2">#F6D584</color>
+    <color name="tutorial_background3">#61A2DA</color>
+    <color name="reply_highlight">#f1e3c6</color>
+
+    <color name="unabled_preference_color">#CCCCCC</color>
+
 </resources>
+
