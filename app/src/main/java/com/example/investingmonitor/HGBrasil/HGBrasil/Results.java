@@ -1,4 +1,4 @@
-package com.example.investingmonitor.models;
+package com.example.investingmonitor.HGBrasil.HGBrasil;
 
 public class Results {
     public String date;

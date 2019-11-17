@@ -12,10 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.investingmonitor.HGBrasil.HGBrasil.HGBrasilApiService;
+import com.example.investingmonitor.HGBrasil.HGBrasil.Tax;
 import com.example.investingmonitor.Main.MainPresenter;
 import com.example.investingmonitor.R;
-import com.example.investingmonitor.models.Tax;
-import com.example.investingmonitor.webService.HGBrasilApiService;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Call;

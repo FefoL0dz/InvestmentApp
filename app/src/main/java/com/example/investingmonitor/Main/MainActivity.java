@@ -11,12 +11,11 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+
 import com.example.investingmonitor.Feed.FeedActivity;
 import com.example.investingmonitor.R;
 
-public class MainActivity extends AppCompatActivity implements MainContract.View{
-
-    private MainPresenter presenter;
+public class MainActivity extends AppCompatActivity implements MainContract.View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +40,11 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @Override
     public void onResume() {
         super.onResume();
-        this.presenter.subscribe();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        this.presenter.unsubscribe();
     }
 
     @Override

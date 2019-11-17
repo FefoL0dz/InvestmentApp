@@ -1,8 +1,4 @@
-package com.example.investingmonitor.webService;
-
-import com.example.investingmonitor.models.Quotation;
-import com.example.investingmonitor.models.Results;
-import com.example.investingmonitor.models.Tax;
+package com.example.investingmonitor.HGBrasil.HGBrasil;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
