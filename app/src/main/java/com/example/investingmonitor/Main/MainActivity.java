@@ -14,6 +14,7 @@ import android.view.WindowManager;
 
 import com.example.investingmonitor.Feed.FeedActivity;
 import com.example.investingmonitor.R;
+import com.example.investingmonitor.webService.ApiServiceGenerator;
 
 public class MainActivity extends AppCompatActivity implements MainContract.View {
 
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.setStatusBarColor(ContextCompat.getColor(this.getApplicationContext(),R.color.grey_dark));
         }
+
+        ApiServiceGenerator.getInstance().generate();
     }
 
     @Override
