@@ -1,6 +1,6 @@
-package com.example.investingmonitor.Main;
+package com.example.investingmonitor.project.main;
 
-public class MainPresenter implements MainContract.Actions{
+public class MainPresenter implements MainContract.Actions {
     MainActivity view;
     @Override
     public void subscribe() {

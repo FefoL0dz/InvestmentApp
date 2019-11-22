@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.investingmonitor.Main.MainPresenter;
+import com.example.investingmonitor.project.main.MainPresenter;
 import com.example.investingmonitor.R;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;

@@ -1,6 +1,7 @@
-package com.example.investingmonitor.webService;
+package com.example.investingmonitor.project.webService;
 
-import com.example.investingmonitor.models.Stock;
+import com.example.investingmonitor.project.feed.FeedContract;
+import com.example.investingmonitor.project.models.Stock;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -9,12 +10,19 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiServiceGenerator {
+private FeedContract.View view;
 
-    public static ApiServiceGenerator getInstance() {
-        return new ApiServiceGenerator();
+    public ApiServiceGenerator(FeedContract.View view) {
+        this.view = view;
     }
 
-    public void generate () {
+    public static ApiServiceGenerator getInstance(FeedContract.View view) {
+        return new ApiServiceGenerator(view);
+    }
+
+    public Response<Stock> results;
+
+    public Response<Stock> generate () {
 
         Retrofit retrofit = createRetrofitInstance();
 
@@ -22,17 +30,18 @@ public class ApiServiceGenerator {
 
         Call<Stock> taxRequest = service.stocks();
 
+        results = null;
+
         taxRequest.enqueue(new Callback<Stock>() {
             @Override
             public void onResponse(Call<Stock> call, Response<Stock> response) {
 
                 if(!response.isSuccessful()) {
-
                    // showErrorMessage(getString(response.code()));
-
+                    results = response;
                 } else {
                     //showSuccessMessage(response.message());
-                    Stock results = response.body();
+                    results = response;
                    // showTaxes(results);
                 }
             }
@@ -40,8 +49,11 @@ public class ApiServiceGenerator {
             @Override
             public void onFailure(Call<Stock> call, Throwable t) {
                 //showErrorMessage(t.getMessage());
+                view.showErrorMessage(t.getMessage());
             }
         });
+
+        return results;
     }
 
     private Retrofit createRetrofitInstance() {

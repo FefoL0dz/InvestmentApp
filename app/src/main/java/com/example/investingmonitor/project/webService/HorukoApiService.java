@@ -1,6 +1,6 @@
-package com.example.investingmonitor.webService;
+package com.example.investingmonitor.project.webService;
 
-import com.example.investingmonitor.models.Stock;
+import com.example.investingmonitor.project.models.Stock;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

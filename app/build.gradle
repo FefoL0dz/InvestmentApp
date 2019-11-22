@@ -42,6 +42,7 @@ dependencies {
     //implementation investingMonitorDependencies.retroFit2converterGson
     //implementation investingMonitorDependencies.retroFit2
     //implementation investingMonitorDependencies.sweetAlert
+    implementation "com.jjoe64:graphview:4.2.2"
     implementation "com.squareup.retrofit2:retrofit:2.3.0"
     implementation "com.squareup.retrofit2:converter-gson:2.0.2"
     implementation "com.github.f0ris.sweetalert:library:1.5.1"

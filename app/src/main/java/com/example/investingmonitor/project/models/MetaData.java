@@ -1,4 +1,4 @@
-package com.example.investingmonitor.models;
+package com.example.investingmonitor.project.models;
 
 public class MetaData
 {

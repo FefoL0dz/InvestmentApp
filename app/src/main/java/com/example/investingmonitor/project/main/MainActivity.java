@@ -1,4 +1,4 @@
-package com.example.investingmonitor.Main;
+package com.example.investingmonitor.project.main;
 
 import android.content.Intent;
 import android.os.Build;
@@ -12,9 +12,10 @@ import android.view.Window;
 import android.view.WindowManager;
 
 
-import com.example.investingmonitor.Feed.FeedActivity;
+import com.example.investingmonitor.project.feed.FeedActivity;
 import com.example.investingmonitor.R;
-import com.example.investingmonitor.webService.ApiServiceGenerator;
+import com.example.investingmonitor.project.splash.SplashActivity;
+import com.example.investingmonitor.project.webService.ApiServiceGenerator;
 
 public class MainActivity extends AppCompatActivity implements MainContract.View {
 
@@ -36,8 +37,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.setStatusBarColor(ContextCompat.getColor(this.getApplicationContext(),R.color.grey_dark));
         }
-
-        ApiServiceGenerator.getInstance().generate();
+        showSplashScreen();
     }
 
     @Override
@@ -80,6 +80,15 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @Override
     public void showFeedScreen() {
         Intent intent = new Intent(this, FeedActivity.class);
+        this.overridePendingTransition(android.R.anim.fade_in,
+                android.R.anim.fade_out);
+        this.startActivity(intent);
+        this.finish();
+    }
+
+    @Override
+    public void showSplashScreen() {
+        Intent intent = new Intent(this, SplashActivity.class);
         this.overridePendingTransition(android.R.anim.fade_in,
                 android.R.anim.fade_out);
         this.startActivity(intent);

@@ -1,4 +1,4 @@
-package com.example.investingmonitor.Profile;
+package com.example.investingmonitor.project.profile;
 
 import android.support.v7.app.AppCompatActivity;
 
