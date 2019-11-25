@@ -46,6 +46,10 @@ public class Stock {
         this.high = high;
     }
 
+    public void setHighAtIndex(String highIndex, int index) {
+        this.high[index] = highIndex;
+    }
+
     public String[] getLow ()
     {
         return low;
@@ -54,6 +58,10 @@ public class Stock {
     public void setLow (String[] low)
     {
         this.low = low;
+    }
+
+    public void setLowAtIndex(String lowIndex, int index) {
+        this.low[index] = lowIndex;
     }
 
     public MetaData getMetaData ()

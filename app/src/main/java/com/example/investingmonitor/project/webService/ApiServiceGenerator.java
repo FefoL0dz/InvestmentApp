@@ -20,9 +20,7 @@ private FeedContract.View view;
         return new ApiServiceGenerator(view);
     }
 
-    public Response<Stock> results;
-
-    public Response<Stock> generate () {
+    public void generate () {
 
         Retrofit retrofit = createRetrofitInstance();
 
@@ -30,31 +28,48 @@ private FeedContract.View view;
 
         Call<Stock> taxRequest = service.stocks();
 
-        results = null;
-
         taxRequest.enqueue(new Callback<Stock>() {
             @Override
             public void onResponse(Call<Stock> call, Response<Stock> response) {
-
-                if(!response.isSuccessful()) {
-                   // showErrorMessage(getString(response.code()));
-                    results = response;
-                } else {
-                    //showSuccessMessage(response.message());
-                    results = response;
-                   // showTaxes(results);
+                if(response.isSuccessful()) {
+                    //Stock result =  insertionSortst(response.body());
+                    view.showStockResults(response.body());
                 }
+                else
+                    view.showUnsucessMessage(String.valueOf(response.code()));
             }
 
             @Override
             public void onFailure(Call<Stock> call, Throwable t) {
-                //showErrorMessage(t.getMessage());
                 view.showErrorMessage(t.getMessage());
             }
         });
-
-        return results;
     }
+
+//    public Stock insertionSortst(Stock vetor) {
+//        int j;
+//        double key;
+//        double key2;
+//        int i;
+//
+//        for (j = 1; j < vetor.getHigh().length; j++)
+//        {
+//            key = Double.valueOf(vetor.getHigh()[j]);
+//            key2= Double.valueOf(vetor.getLow()[j]);
+//            for (i = j - 1; (i >= 0) && (Double.valueOf(vetor.getHigh()[i]) > key); i--)
+//            {
+////                vetor.getHigh()[i + 1] = vetor.getHigh()[i];
+////                vetor.getLow()[i + 1] = vetor.getLow()[i];
+//                vetor.setHighAtIndex(vetor.getHigh()[i], i + 1);
+//                vetor.setLowAtIndex(vetor.getLow()[i], i + 1);
+//            }
+////            vetor.getHigh()[i + 1] = String.valueOf(key);
+////            vetor.getLow()[i + 1] = String.valueOf(key2);
+//            vetor.setHighAtIndex(String.valueOf(key), i + 1);
+//            vetor.setLowAtIndex(String.valueOf(key2), i + 1);
+//        }
+//        return vetor;
+//    }
 
     private Retrofit createRetrofitInstance() {
         return new Retrofit.Builder()
